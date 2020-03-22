@@ -34,5 +34,5 @@ gulp lint
 
 ## References  
 
-* [API Documentation](https://docs.google.com/document/d/1Etqz1cPNQ3Zcp8AncXw_ZL9JolbvxcrOPZksC-4zhi0/edit)
+* [API Documentation](https://docs.google.com/document/d/10EjDKt1XLAejFvWU0lWCK1tMt3voPpzQ1rH1EkiSdMY/edit?usp=sharing)
 

@@ -32,7 +32,7 @@ function getTransactionById(params, cb) {
     console.log('[transaction-processor] [getTransactionById] Getting a transaction by Id : ' + params.transaction_id);
     var queryString = `SELECT * FROM transactions WHERE id =  ${params.transaction_id}`;
     mysql.executeQuery(queryString, 1, 7, function (err, data) {
-        cb(data, null);
+        cb(null, data);
     });
 }
 
@@ -48,7 +48,11 @@ function getTransactionIdsByType(params, cb) {
             console.log('[transaction-processor] [getTransactionIdsByType] Error while fetching transaction list');
             cb(err, null);
         }
-        cb(null, data);
+        var res = [];
+        for(let i=0; i<data.length; i++) {
+            res.push(data[i].id);
+        }
+        cb(null, res);
     });
 }
 

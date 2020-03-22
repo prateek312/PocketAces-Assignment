@@ -7,10 +7,10 @@
  */
 /** module imports */
 
-var multiverseApiRouter = require('./transaction-api-doc.js');
+var transactionApiRouter = require('./transaction-api-doc.js');
 
 var setup = function (app) {
-    app.use('/api/v1', multiverseApiRouter);
+    app.use('/api/v1', transactionApiRouter);
     app.use('/', (_, res) => res.sendStatus(404));
 };
 

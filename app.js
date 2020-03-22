@@ -26,7 +26,7 @@ app.use(function (req, res, next) {
     if (req.headers.accept === 'text/json') {
         res.setHeader('Content-Type', 'text/json');
     } else {
-        res.setHeader('Content-Type', 'application/json');
+        res.setHeader('Content-Type', 'text/json');
     }
 
 });

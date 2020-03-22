@@ -35,7 +35,7 @@ exports.getTransactionById = function(req, res) {
             res.status(constants.HTTP_STATUS_CODES.HTTP_BAD_REQUEST);
             res.send(err);
         } else {
-            res.send(data);
+            res.send(data[0]);
         }
     });
 }
@@ -63,7 +63,7 @@ exports.getTotalByTransactionId = function(req, res) {
             res.status(constants.HTTP_STATUS_CODES.HTTP_BAD_REQUEST);
             res.send(err);
         } else {
-            res.send({'Total': data});
+            res.send({'Sum': data});
         }
     });
 }
