@@ -18,7 +18,7 @@ function addTransaction(params, body, cb) {
         parent_id = body.parent_id;
     }
 
-    var queryString = `INSERT INTO transactions VALUES(${params.transaction_id}, ${amount}, ${type}, ${parent_id})`;
+    var queryString = `INSERT INTO transactions VALUES(${params.transaction_id}, ${amount}, '${type}', ${parent_id})`;
     mysql.executeQuery(queryString, 1, 7, function (err, data) {
         cb(err, data);
     });
